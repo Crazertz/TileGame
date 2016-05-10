@@ -1,5 +1,6 @@
 package dev.codenmore.tilegame;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.ScrollPaneAdjustable;
 import java.awt.image.BufferStrategy;
@@ -46,8 +47,16 @@ public class Game implements Runnable
 			return;
 		}
 		g = bs.getDrawGraphics();
-				
-		g.drawRoundRect(450, 450, 100, 100, 100, 100);
+		//Clear Screen
+		g.clearRect(0, 0, width, height);
+		//Draw Here
+		
+		g.setColor(Color.red);
+		g.fillRect(10, 50, 50, 70);
+		g.setColor(Color.green);
+		g.fillRect(0, 0, 10, 10);
+		
+		//End Drawing		
 		bs.show();
 		g.dispose();
 	}
